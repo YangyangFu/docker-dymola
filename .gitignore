@@ -1,0 +1,6 @@
+# ignore licensed files
+*/installer/*
+*/license/*
+
+# ignore macOS generated files
+*.DS_Store
