@@ -45,8 +45,10 @@ RUN cd ${HOME}/dymola-rpms && \
 RUN cd /usr/local/bin && \
     mv dymola* dymola
 
-# Invalidate dymola's shipped libstdc++ version
-#RUN mv /opt/dymola-${DYMOLA_VERSION}-x86_64/bin/lib64/libstdc++.so.6.0.20 /opt/dymola-${DYMOLA_VERSION}-x86_64/bin/lib64/libstdc++.so.6.0.20.bak
+# Create a folder for MODELICAPATH so that we mount dependency from local 
+WORKDIR ${HOME}
+RUN mkdir modelica_path 
+ENV MODELICAPATH ${HOME}/modelica_path
 
 # Clean folder
 WORKDIR ${HOME}
