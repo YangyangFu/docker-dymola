@@ -17,6 +17,8 @@ export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 brew install --cask xquartz
 ```
+## Enable remote connection from X11
+Open XQUARTZ, go to Security Settings and ensure that "Allow connections from network clients" is on.
 
 ## run dymola docker and forward GUI through xhost
 ```
